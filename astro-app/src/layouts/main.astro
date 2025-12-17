@@ -1,0 +1,9 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+
+const { content } = Astro.props;
+---
+
+<BaseLayout title={content?.title ?? "studio.reondev.com"}>
+	<slot />
+</BaseLayout>

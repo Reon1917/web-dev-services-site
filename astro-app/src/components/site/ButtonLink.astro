@@ -1,0 +1,44 @@
+---
+type Props = {
+  href: string;
+  variant?: "primary" | "secondary" | "ghost";
+  size?: "sm" | "md";
+  class?: string;
+  target?: string;
+  rel?: string;
+};
+
+const {
+  href,
+  variant = "primary",
+  size = "md",
+  class: className,
+  target,
+  rel,
+} = Astro.props;
+
+const base =
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-lg font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50";
+
+const variants: Record<NonNullable<Props["variant"]>, string> = {
+  primary:
+    "bg-primary text-primary-foreground hover:bg-primary/90 shadow-sm",
+  secondary:
+    "bg-secondary text-secondary-foreground hover:bg-secondary/80 border border-border",
+  ghost: "hover:bg-accent hover:text-accent-foreground",
+};
+
+const sizes: Record<NonNullable<Props["size"]>, string> = {
+  sm: "h-9 px-3 text-sm",
+  md: "h-11 px-4 text-sm",
+};
+---
+
+<a
+  href={href}
+  target={target}
+  rel={rel}
+  class:list={[base, variants[variant], sizes[size], className]}
+>
+  <slot />
+</a>

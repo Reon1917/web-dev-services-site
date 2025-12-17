@@ -1,0 +1,31 @@
+---
+import Container from "./Container.astro";
+import { site } from "@/lib/site";
+import SocialLinks from "./SocialLinks.astro";
+---
+
+<footer class="border-t border-border/60">
+  <Container class="py-10">
+    <div class="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
+      <div>
+        <p class="text-sm font-semibold">{site.ownerName}</p>
+        <p class="mt-1 text-sm text-muted-foreground">
+          Static websites that look premium and convert — for businesses that want more enquiries.
+        </p>
+      </div>
+      <div class="flex flex-col gap-3 sm:items-end">
+        <div class="flex flex-wrap gap-3 text-sm">
+          <a class="text-muted-foreground hover:text-foreground" href="#services">Services</a>
+          <a class="text-muted-foreground hover:text-foreground" href="#contact">Contact</a>
+          <a class="text-muted-foreground hover:text-foreground" href={`mailto:${site.contactEmail}`}>
+            {site.contactEmail}
+          </a>
+        </div>
+        <SocialLinks class="justify-start sm:justify-end" />
+      </div>
+    </div>
+    <p class="mt-8 text-xs text-muted-foreground">
+      © {new Date().getFullYear()} {site.ownerName}. All rights reserved.
+    </p>
+  </Container>
+</footer>

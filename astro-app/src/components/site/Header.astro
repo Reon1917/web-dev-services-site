@@ -1,0 +1,27 @@
+---
+import Container from "./Container.astro";
+import SocialLinks from "./SocialLinks.astro";
+import ThemeToggle from "./ThemeToggle.astro";
+import { site } from "@/lib/site";
+---
+
+<header class="sticky top-0 z-50 border-b border-border/60 bg-background/80 backdrop-blur">
+  <Container class="flex h-16 items-center justify-between gap-4">
+    <a href="/" class="text-sm font-semibold tracking-tight" aria-label={site.brand}>
+      {site.brand}
+    </a>
+
+    <nav class="hidden items-center gap-6 text-sm text-muted-foreground md:flex">
+      <a class="hover:text-foreground" href="#services">Services</a>
+      <a class="hover:text-foreground" href="#process">Process</a>
+      <a class="hover:text-foreground" href="#tech">Tech</a>
+      <a class="hover:text-foreground" href="#faq">FAQ</a>
+      <a class="hover:text-foreground" href="#contact">Contact</a>
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <SocialLinks class="hidden sm:flex" />
+      <ThemeToggle />
+    </div>
+  </Container>
+</header>

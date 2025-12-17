@@ -1,0 +1,114 @@
+---
+import Container from "@/components/site/Container.astro";
+import ButtonLink from "@/components/site/ButtonLink.astro";
+import { site } from "@/lib/site";
+---
+
+<section class="relative overflow-hidden">
+  <div class="pointer-events-none absolute inset-0 -z-10">
+    <svg
+      class="absolute inset-x-0 top-0 h-56 w-full text-primary/25 opacity-50 [mask-image:linear-gradient(to_bottom,black,transparent_85%)]"
+      viewBox="0 0 1200 240"
+      preserveAspectRatio="none"
+      aria-hidden="true"
+    >
+      <path
+        d="M0,70 C160,30 280,110 440,70 C600,30 720,110 880,70 C1040,30 1120,70 1200,50"
+        stroke="currentColor"
+        stroke-width="1.2"
+        fill="none"
+      />
+      <path
+        d="M0,110 C180,70 300,150 460,110 C620,70 740,150 900,110 C1060,70 1140,110 1200,90"
+        stroke="currentColor"
+        stroke-width="1.2"
+        fill="none"
+      />
+      <path
+        d="M0,150 C200,110 320,190 480,150 C640,110 760,190 920,150 C1080,110 1160,150 1200,130"
+        stroke="currentColor"
+        stroke-width="1.2"
+        fill="none"
+      />
+      <path
+        d="M0,190 C220,150 340,230 500,190 C660,150 780,230 940,190 C1100,150 1180,190 1200,170"
+        stroke="currentColor"
+        stroke-width="1.2"
+        fill="none"
+      />
+    </svg>
+    <div class="absolute inset-0 bg-[linear-gradient(to_bottom,transparent,oklch(1_0_0)_65%)] dark:bg-[linear-gradient(to_bottom,transparent,oklch(0.145_0_0)_65%)]" />
+  </div>
+
+  <Container class="py-16 sm:py-24">
+    <div class="grid gap-10 lg:grid-cols-12 lg:items-center">
+      <div class="lg:col-span-7">
+        <p class="inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1 text-xs text-muted-foreground">
+          <span class="size-1.5 rounded-full bg-primary" />
+          {site.locationLabel}
+        </p>
+        <h1 class="mt-5 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
+          A professional website that makes customers take action.
+        </h1>
+        <p class="mt-4 max-w-xl text-pretty text-muted-foreground">
+          I build clean, fast, and trustworthy websites for small businesses — with
+          clear pricing and a simple process.
+        </p>
+
+        <div class="mt-8 flex flex-wrap items-center gap-3">
+          <ButtonLink
+            href={site.booking.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {site.booking.label}
+          </ButtonLink>
+          <ButtonLink href="#services" variant="secondary">
+            View packages
+          </ButtonLink>
+        </div>
+
+        <div class="mt-10 grid gap-4 sm:grid-cols-3">
+          <div class="rounded-xl border border-border bg-card p-4">
+            <p class="text-sm font-semibold">Clear pricing</p>
+            <p class="mt-1 text-sm text-muted-foreground">No confusing tech talk.</p>
+          </div>
+          <div class="rounded-xl border border-border bg-card p-4">
+            <p class="text-sm font-semibold">Mobile-first</p>
+            <p class="mt-1 text-sm text-muted-foreground">Looks great on phones.</p>
+          </div>
+          <div class="rounded-xl border border-border bg-card p-4">
+            <p class="text-sm font-semibold">Fast + SEO-ready</p>
+            <p class="mt-1 text-sm text-muted-foreground">Speed and basics built-in.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-5">
+        <div class="rounded-2xl border border-border bg-card p-6 shadow-sm">
+          <p class="text-sm font-semibold">Perfect for</p>
+          <ul class="mt-3 space-y-3 text-sm text-muted-foreground">
+            <li class="flex gap-2">
+              <span class="mt-1 size-1.5 shrink-0 rounded-full bg-primary" />
+              Cafés, restaurants, salons, fitness studios
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-1 size-1.5 shrink-0 rounded-full bg-primary" />
+              Local services (cleaning, repair, clinics)
+            </li>
+            <li class="flex gap-2">
+              <span class="mt-1 size-1.5 shrink-0 rounded-full bg-primary" />
+              Personal brands and creators
+            </li>
+          </ul>
+          <div class="mt-6 rounded-xl bg-secondary p-4">
+            <p class="text-sm font-semibold">Starting from ฿3,500</p>
+            <p class="mt-1 text-sm text-muted-foreground">
+              Launch a clean landing page that turns visitors into messages.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>

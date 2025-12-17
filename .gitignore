@@ -137,3 +137,6 @@ dist
 # Vite logs files
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# Prevent committing the old nested repo metadata (kept as a safety backup).
+astro-app/.git-embedded-backup/

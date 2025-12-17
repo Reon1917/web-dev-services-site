@@ -1,0 +1,42 @@
+---
+import Container from "@/components/site/Container.astro";
+import SectionHeading from "@/components/site/SectionHeading.astro";
+---
+
+<section id="process" class="border-t border-border/60">
+  <Container class="py-16 sm:py-20">
+    <SectionHeading
+      eyebrow="How it works"
+      title="A simple process that keeps it stress-free"
+      description="You don’t need to know tech. Just tell me what you do, and I’ll turn it into a clear website."
+    />
+
+    <ol class="mt-10 grid gap-6 lg:grid-cols-4">
+      {[
+        {
+          title: "Quick chat",
+          body: "We confirm your goals, pages, and the style you like.",
+        },
+        {
+          title: "Structure + copy",
+          body: "I organize your content so it’s easy to understand and action-focused.",
+        },
+        {
+          title: "Build + review",
+          body: "You get a preview link to review and request revisions.",
+        },
+        {
+          title: "Launch",
+          body: "I publish the site and hand everything over cleanly.",
+        },
+      ].map((step, idx) => (
+        <li class="rounded-2xl border border-border bg-card p-6 shadow-sm">
+          <p class="text-xs font-medium text-muted-foreground">Step {idx + 1}</p>
+          <p class="mt-2 text-sm font-semibold">{step.title}</p>
+          <p class="mt-2 text-sm text-muted-foreground">{step.body}</p>
+        </li>
+      ))}
+    </ol>
+  </Container>
+</section>
+

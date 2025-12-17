@@ -1,0 +1,45 @@
+---
+import { Facebook, Linkedin, Mail } from "@lucide/astro";
+import { site } from "@/lib/site";
+
+type Props = {
+  class?: string;
+  showLabels?: boolean;
+};
+
+const { class: className, showLabels = false } = Astro.props;
+
+const iconOnly =
+  "inline-flex size-9 items-center justify-center rounded-lg border border-border bg-background text-muted-foreground transition-colors hover:bg-accent hover:text-foreground";
+const withLabel =
+  "inline-flex items-center gap-2 rounded-lg border border-border bg-background px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-accent hover:text-foreground";
+const linkClass = showLabels ? withLabel : iconOnly;
+const iconClass = "size-4";
+---
+
+<div class:list={["flex flex-wrap items-center gap-2", className]}>
+  <a class={linkClass} href={`mailto:${site.contactEmail}`} aria-label="Email">
+    <Mail class={iconClass} />
+    {showLabels ? <span>Email</span> : null}
+  </a>
+  <a
+    class={linkClass}
+    href={site.social.linkedin}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="LinkedIn"
+  >
+    <Linkedin class={iconClass} />
+    {showLabels ? <span>LinkedIn</span> : null}
+  </a>
+  <a
+    class={linkClass}
+    href={site.social.facebook}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Facebook"
+  >
+    <Facebook class={iconClass} />
+    {showLabels ? <span>Facebook</span> : null}
+  </a>
+</div>
