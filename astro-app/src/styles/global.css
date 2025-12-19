@@ -114,10 +114,48 @@
 }
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  section[id] {
+    scroll-margin-top: 5rem;
+  }
+
   * {
     @apply border-border outline-ring/50;
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@layer utilities {
+  .hero-waves {
+    transform: translate3d(0, 0, 0);
+    animation: hero-waves-drift 12s ease-in-out infinite alternate;
+    will-change: transform;
+  }
+
+  @keyframes hero-waves-drift {
+    from {
+      transform: translate3d(-8px, 0, 0);
+    }
+    to {
+      transform: translate3d(8px, 0, 0);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero-waves {
+      animation: none !important;
+    }
   }
 }

@@ -7,7 +7,7 @@ import { site } from "@/lib/site";
 <section class="relative overflow-hidden">
   <div class="pointer-events-none absolute inset-0 -z-10">
     <svg
-      class="absolute inset-x-0 top-0 h-56 w-full text-primary/25 opacity-50 [mask-image:linear-gradient(to_bottom,black,transparent_85%)]"
+      class="hero-waves absolute inset-x-0 top-0 h-56 w-full text-primary/25 opacity-50 [mask-image:linear-gradient(to_bottom,black,transparent_85%)]"
       viewBox="0 0 1200 240"
       preserveAspectRatio="none"
       aria-hidden="true"
@@ -60,6 +60,7 @@ import { site } from "@/lib/site";
             href={site.booking.url}
             target="_blank"
             rel="noopener noreferrer"
+            class="transition-transform duration-150 active:translate-y-px active:scale-[0.99]"
           >
             {site.booking.label}
           </ButtonLink>
