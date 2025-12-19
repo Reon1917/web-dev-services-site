@@ -11,10 +11,10 @@ export const site = {
   brand: "Reon",
   ownerName: "Lin Myat Phyo (Reon)",
   locationLabel: "Thailand (remote-friendly)",
-  primaryCta: "Free consultation",
+  primaryCta: "Free Consultation",
   contactEmail: "linmyatphyo03@gmail.com",
   booking: {
-    label: "Free consultation",
+    label: "Free Consultation",
     url: "https://calendar.app.google/VEX5MHq6u7kSFhoXA",
   },
   social: {
@@ -27,10 +27,10 @@ export const site = {
       name: "Landing Page",
       priceTHB: 3500,
       pageLimitLabel: "1 page",
-      bestFor: "A simple, high-converting offer page.",
+      bestFor: "A simple, focused offer page.",
       highlights: [
-        "Mobile-first design",
-        "Fast loading + basic SEO setup",
+        "Responsive design",
+        "Fast loading + SEO basics",
         "Contact buttons (LINE/phone/email) + map embed",
         "1 round of revisions",
       ],
@@ -56,7 +56,7 @@ export const site = {
       bestFor: "Service pages + trust-building content.",
       highlights: [
         "Stronger structure for SEO and clarity",
-        "Sections designed for conversions",
+        "Sections designed for clarity and trust",
         "Performance-focused build",
         "2 rounds of revisions",
       ],
@@ -86,11 +86,11 @@ export const site = {
     },
     {
       q: "Can you write the content for me?",
-      a: "Yes. If you give me a rough outline (services, prices, contact details), I can help shape the copy for clarity and conversions.",
+      a: "Yes. If you give me a rough outline (services, prices, contact details), I can help shape the copy for clarity and results.",
     },
     {
       q: "Will it work on mobile?",
-      a: "Yes — everything is designed mobile-first and tested on common screen sizes.",
+      a: "Yes — everything is responsive and tested on common screen sizes.",
     },
   ],
 } as const;
