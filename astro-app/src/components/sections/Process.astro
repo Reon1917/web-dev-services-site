@@ -6,28 +6,28 @@ import SectionHeading from "@/components/site/SectionHeading.astro";
 <section id="process" class="border-t border-border/60">
   <Container class="py-16 sm:py-20">
     <SectionHeading
-      eyebrow="How it works"
-      title="A simple process that keeps it stress-free"
-      description="You don’t need to know tech. Just tell me what you do, and I’ll turn it into a clear website."
+      eyebrow="How It Works"
+      title="From Kickoff to Launch"
+      description="You share the details—I plan the content, build a fast, responsive site, and launch it with full handover or ongoing maintenance."
     />
 
     <ol class="mt-10 grid gap-6 lg:grid-cols-4">
       {[
         {
-          title: "Quick chat",
-          body: "We confirm your goals, pages, and the style you like.",
+          title: "Kickoff Call",
+          body: "Confirm your goals, pages, and examples you like.",
         },
         {
-          title: "Structure + copy",
-          body: "I organize your content so it’s easy to understand and action-focused.",
+          title: "Content Planning",
+          body: "Organize your content and next steps so it’s easy to understand.",
         },
         {
-          title: "Build + review",
-          body: "You get a preview link to review and request revisions.",
+          title: "Design & Build",
+          body: "I build the site; you review with a preview link and request revisions.",
         },
         {
-          title: "Launch",
-          body: "I publish the site and hand everything over cleanly.",
+          title: "Launch & Support Options",
+          body: "Go live, then choose full handover or ongoing maintenance.",
         },
       ].map((step, idx) => (
         <li class="rounded-2xl border border-border bg-card p-6 shadow-sm">
@@ -39,4 +39,3 @@ import SectionHeading from "@/components/site/SectionHeading.astro";
     </ol>
   </Container>
 </section>
-
